@@ -6,13 +6,13 @@ pipeline{
         stage('Build'){
             steps{
                 echo 'Building project'
-                sh 'g++ -o hello_world hello_world.cpp'
+                sh 'g++ -o jenkins_test/hello_world hello_world.cpp'
             }
         }
         stage('Test'){
             steps{
-            echo 'Running project'
-            sh './hello_world'
+            echo 'Test Stage'
+            
             }
         }
     }
