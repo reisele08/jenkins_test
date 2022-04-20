@@ -5,8 +5,8 @@ pipeline{
 
         stage('Build'){
             steps{
-                echo 'Building project'
-                g++ "jenkins_test/hello_world.cpp" -o "jenkins_test/hello_world"
+                echo 'Building project'             
+                bat 'gcc jenkins_test/hello_world.cpp -o jenkins_test/hello_world'
             }
         }
         stage('Test'){
