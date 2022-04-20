@@ -6,7 +6,7 @@ pipeline{
         stage('Build'){
             steps{
                 echo 'Building project'             
-                bat 'python jenkins_test/hello_world.py'
+                python jenkins_test/hello_world.py
             }
         }
         stage('Test'){
