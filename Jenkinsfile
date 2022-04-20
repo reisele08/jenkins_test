@@ -1,6 +1,8 @@
 pipeline{
     agent any
+
     stages{
+
         stage('Build'){
             steps{
                 echo 'Building project'
@@ -8,8 +10,10 @@ pipeline{
             }
         }
         stage('Test'){
+            steps{
             echo 'Running project'
             sh './hello_world'
+            }
         }
     }
 }
